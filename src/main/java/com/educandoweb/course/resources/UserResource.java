@@ -11,9 +11,9 @@ import com.educandoweb.course.entities.User;
 @RequestMapping (value = "/users")
 public class UserResource {
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping (method = RequestMethod.GET)
 	public ResponseEntity <User> findAll(){ 
-		User u = new User(1, "Maria", "maria@gmail.com", "9999999", "12345");
+		User u = new User((long) 1, "Maria", "maria@gmail.com", "9999999", "12345");
 		return ResponseEntity.ok().body(u);
 		
 	}
